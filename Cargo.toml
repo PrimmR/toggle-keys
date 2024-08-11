@@ -1,0 +1,19 @@
+[package]
+name = "toggle-keys"
+version = "0.0.1"
+edition = "2021"
+
+authors = ["PrimmR"]
+description = "Get the state of toggleable keyboard keys"
+license = "GNU General Public License v3.0"
+readme = "README.md"
+repository = "https://github.com/PrimmR/toggle-keys"
+categories = ["os"]
+keywords = ["toggle", "lock", "keys", "key-led", "caps-lock"]
+
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows = { version = "0.58.0", features = ["Win32_UI_Input_KeyboardAndMouse"] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+evdev = "0.12.2"
