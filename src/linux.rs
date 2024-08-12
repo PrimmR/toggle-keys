@@ -14,3 +14,15 @@ pub fn get_caps_lock_state() -> bool {
             .map_or(false, |s| s.contains(LedCode::LED_CAPSL))
     })
 }
+
+pub fn get_num_lock_state() -> bool {
+    unimplemented!()
+}
+
+pub fn get_scroll_lock_state() -> bool {
+    unimplemented!()
+}
+
+pub fn get_kana_lock_state() -> bool {
+    unimplemented!()
+}

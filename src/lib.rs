@@ -17,6 +17,18 @@ pub fn get_caps_lock_state() -> bool {
     os::get_caps_lock_state()
 }
 
+pub fn get_num_lock_state() -> bool {
+    os::get_num_lock_state()
+}
+
+pub fn get_scroll_lock_state() -> bool {
+    os::get_scroll_lock_state()
+}
+
+pub fn get_kana_lock_state() -> bool {
+    os::get_kana_lock_state()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -24,5 +36,20 @@ mod tests {
     #[test]
     fn caps() {
         println!("Caps: {}", get_caps_lock_state())
+    }
+
+    #[test]
+    pub fn num() {
+        println!("Num: {}", get_num_lock_state())
+    }
+
+    #[test]
+    pub fn scroll() {
+        println!("Scroll: {}", get_scroll_lock_state())
+    }
+
+    #[test]
+    pub fn kana() {
+        println!("Kana: {}", get_kana_lock_state())
     }
 }
